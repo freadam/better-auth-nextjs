@@ -18,7 +18,7 @@ export default async function page() {
   console.log({ session });
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b">
+      <header className="relative z-20 border-b">
         <div className="container  flex h-16 items-center justify-between">
           <div className="flex items-center ">
             <span className="font-bold text-xl">Better-Auth</span>
