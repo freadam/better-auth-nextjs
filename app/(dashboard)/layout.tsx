@@ -19,7 +19,7 @@ export default async function layout({
   console.log("Dashboard");
   console.log({ session });
   if (!session?.user) {
-    return;
+    redirect("/login");
   }
 
   return (
