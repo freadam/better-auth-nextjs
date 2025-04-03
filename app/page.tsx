@@ -40,18 +40,12 @@ export default async function page() {
               ) : (
                 <>
                   <Link href="/login">
-                    <Button
-                      className="rounded-none"
-                      variant="outline"
-                      size="icon"
-                    >
+                    <Button className="rounded-none" variant="outline">
                       Log in
                     </Button>
                   </Link>
                   <Link href="/signup">
-                    <Button className="rounded-none" size="icon">
-                      Sign up
-                    </Button>
+                    <Button className="rounded-none">Sign up</Button>
                   </Link>
                 </>
               )}
