@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/sidebar";
 import { user } from "@prisma/client";
 import LogoutButton from "./auth/logout-button";
+import { ChevronsUpDown } from "lucide-react";
 
 export function NavUser({ user }: { user: user }) {
   const { isMobile } = useSidebar();
@@ -49,7 +50,7 @@ export function NavUser({ user }: { user: user }) {
                   {user.email}
                 </span>
               </div>
-              <IconDotsVertical className="ml-auto size-4" />
+              <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent

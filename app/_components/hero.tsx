@@ -19,10 +19,13 @@ export default function LandingPage() {
             </div>
             <div className="absolute -inset-4 border border-zinc-800 rounded-full opacity-50"></div>
           </div>
-          <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6 leading-tight">
-            Next.js + Better Auth +<br />
-            Prisma Starter Kit
-          </h1>
+
+          <div className="border my-8 px-10 py-6 border-dashed border-zinc-400/10 dark:border-zinc-700/20 relative">
+            <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6 leading-tight">
+              Next.js + Better Auth +<br />
+              Prisma Starter Kit
+            </h1>
+          </div>
           <p className="text-zinc-400 tracking-tight text-center max-w-2xl mb-10">
             Better-Auth is a complete authentication solution for your Next.js
             projects, powered by Prisma and styled with Shadcn UI components.
