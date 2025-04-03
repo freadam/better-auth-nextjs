@@ -77,6 +77,13 @@ export function ForgetPassword({
                   required
                 />
               </div>
+              <Button disabled={loading} type="submit" className="w-full">
+                {loading ? (
+                  <IconLoader className="animate-spin" stroke={2} />
+                ) : (
+                  "Reset Password"
+                )}
+              </Button>
             </div>
           </form>
         </CardContent>
