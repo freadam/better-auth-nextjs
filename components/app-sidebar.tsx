@@ -15,6 +15,8 @@ import {
   IconHome,
   IconInnerShadowTop,
   IconListDetails,
+  IconMoneybag,
+  IconMoneybagPlus,
   IconReport,
   IconSearch,
   IconSettings,
@@ -36,6 +38,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { user } from "@prisma/client";
+import { SubscriptIcon } from "lucide-react";
 
 const data = {
   navMain: [
@@ -50,30 +53,15 @@ const data = {
       icon: IconUserCircle,
     },
     {
+      title: "Subscriptions",
+      url: "/dashboard/subscriptions",
+      icon: IconMoneybagPlus,
+    },
+    {
       title: "Setting",
       url: "/dashboard/setting",
       icon: IconSettings,
     },
-    // {
-    //   title: "Lifecycle",
-    //   url: "#",
-    //   icon: IconListDetails,
-    // },
-    // {
-    //   title: "Analytics",
-    //   url: "#",
-    //   icon: IconChartBar,
-    // },
-    // {
-    //   title: "Projects",
-    //   url: "#",
-    //   icon: IconFolder,
-    // },
-    // {
-    //   title: "Team",
-    //   url: "#",
-    //   icon: IconUsers,
-    // },
   ],
   navClouds: [
     {
@@ -125,33 +113,12 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "Home",
+      title: "Upgrade to PRO",
       url: "/",
-      icon: IconHome,
-    },
-    {
-      title: "Clone Repository",
-      url: "https://github.com/Achour/nextjs-better-auth",
-      icon: IconCopy,
+      icon: IconMoneybag,
     },
   ],
-  documents: [
-    // {
-    //   name: "Data Library",
-    //   url: "#",
-    //   icon: IconDatabase,
-    // },
-    // {
-    //   name: "Reports",
-    //   url: "#",
-    //   icon: IconReport,
-    // },
-    // {
-    //   name: "Word Assistant",
-    //   url: "#",
-    //   icon: IconFileWord,
-    // },
-  ],
+  documents: [],
 };
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
