@@ -10,14 +10,22 @@ import {
   IconShieldCheckFilled,
 } from "@tabler/icons-react";
 import LandingPage from "./_components/hero";
-import { Shield, Check, Github, ArrowRight, Layout } from "lucide-react";
+import {
+  Shield,
+  Check,
+  Github,
+  ArrowRight,
+  Layout,
+  ArrowUpRight,
+} from "lucide-react";
 export default async function page() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
   console.log({ session });
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex relative min-h-screen flex-col">
+      <div className="h-screen absolute inset-0 w-full -z-10 opacity-40 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       <header className="relative z-20 border-b">
         <div className="container  flex h-16 items-center justify-between">
           <div className="flex items-center ">
@@ -53,23 +61,32 @@ export default async function page() {
           </nav>
         </div>
       </header>
-
       <LandingPage />
-      <footer className="fixed bottom-0 w-full z-10 border-t flex border-zinc-800 py-6 bg-black/80 backdrop-blur-sm">
+      <footer className="fixed border bottom-0 w-full z-10 border-t flex border-zinc-800 py-6 bg-black/80 backdrop-blur-sm">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <Shield className="h-5 w-5 mr-2" />
             <span className="text-sm font-medium">Auth Starter Kit</span>
           </div>
           <div className="flex items-center space-x-6">
-            <Link href="#" className="text-sm text-zinc-400 hover:text-white">
-              Github
+            <Link
+              href="#"
+              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+            >
+              Github <ArrowUpRight className="w-3 h-3" />
             </Link>
-            <Link href="#" className="text-sm text-zinc-400 hover:text-white">
-              Docs
+            <Link
+              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+              href="#"
+            >
+              Docs <ArrowUpRight className="w-3 h-3" />
             </Link>
-            <Link href="#" className="text-sm text-zinc-400 hover:text-white">
+            <Link
+              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+              href="#"
+            >
               Examples
+              <ArrowUpRight className="w-3 h-3" />
             </Link>
           </div>
           <div className="text-sm text-zinc-500 mt-4 md:mt-0">
