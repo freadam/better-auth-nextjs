@@ -33,15 +33,15 @@ export default function LandingPage() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
-            <Button className="rounded-none group flex-1 bg-zinc-100 text-black hover:bg-zinc-200 h-12 text-base">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+            <Button className="rounded-none group bg-zinc-100 text-black hover:bg-zinc-200 h-12 text-base">
               <Github className="mr-2 h-5 w-5" />
-              Clone Repository
+              Get the repo{" "}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
               variant="outline"
-              className="flex-1 rounded-none border-zinc-800 text-white hover:bg-zinc-900 h-12 text-base"
+              className="w-fit rounded-none border-zinc-800 text-white hover:bg-zinc-900 h-12 text-base"
             >
               Try Demo
             </Button>
