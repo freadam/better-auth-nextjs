@@ -6,7 +6,7 @@ export default function LandingPage() {
   return (
     <div className="bg-black text-white flex flex-col">
       <div className="absolute inset-0 z-0">
-        <div className="h-full w-full bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="h-full w-full bg-opacity-5 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div className="absolute inset-0 border border-zinc-800"></div>
       </div>
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-16">
