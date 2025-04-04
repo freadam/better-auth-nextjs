@@ -24,11 +24,11 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { user } from "@prisma/client";
+import { User } from "@prisma/client";
 import LogoutButton from "./auth/logout-button";
 import { ChevronsUpDown } from "lucide-react";
 
-export function NavUser({ user }: { user: user }) {
+export function NavUser({ user }: { user: Partial<User> }) {
   const { isMobile } = useSidebar();
 
   return (
