@@ -21,7 +21,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border my-8 px-10 py-6 border-dashed border-zinc-400/10 dark:border-zinc-700/20 relative">
-            <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6 leading-tight">
+            <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6">
               Next.js + Better Auth +<br />
               Prisma Starter Kit
             </h1>
