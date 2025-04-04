@@ -5,6 +5,12 @@ import { nextCookies } from "better-auth/next-js";
 import { admin } from "better-auth/plugins";
 const prisma = new PrismaClient();
 export const auth = betterAuth({
+  advanced: {
+    ipAddress: {
+      ipAddressHeaders: ["x-client-ip", "x-forwarded-for"],
+      disableIpTracking: false,
+    },
+  },
   emailAndPassword: {
     enabled: true,
     sendResetPassword: async ({ user, token, url }, request) => {

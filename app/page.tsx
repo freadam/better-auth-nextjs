@@ -9,7 +9,6 @@ import {
   IconLockSquareRoundedFilled,
   IconShieldCheckFilled,
 } from "@tabler/icons-react";
-import LandingPage from "./_components/hero";
 import {
   Shield,
   Check,
@@ -21,14 +20,15 @@ import {
 } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import LogoutButton from "@/components/auth/logout-button-icon";
+import HeroSection from "./_components/hero";
 export default async function page() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
+  console.log("here is what i am working..");
   console.log({ session });
   return (
     <div className="flex relative min-h-screen flex-col">
-      {/* <div className="h-screen absolute inset-0 w-full -z-10 opacity-40 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div> */}
       <header className="relative z-20 border-b">
         <div className="container  flex h-16 items-center justify-between">
           <div className="flex items-center ">
@@ -67,7 +67,7 @@ export default async function page() {
           </nav>
         </div>
       </header>
-      <LandingPage />
+      <HeroSection />
       <footer className="fixed border bottom-0 w-full z-10 border-t flex border-zinc-800 py-6 bg-black/80 backdrop-blur-sm">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
