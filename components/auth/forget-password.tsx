@@ -41,8 +41,11 @@ export function ForgetPassword({
         email,
         redirectTo: "/reset-password",
       });
+      console.log({ res });
       setIsSubmitting(false);
     } catch (err) {
+      alert(err);
+      console.log(err);
       setError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -52,9 +55,9 @@ export function ForgetPassword({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
+          <CardTitle>Forget your password</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your email and get a reset link to your inbox
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -77,11 +80,11 @@ export function ForgetPassword({
                   required
                 />
               </div>
-              <Button disabled={loading} type="submit" className="w-full">
-                {loading ? (
+              <Button disabled={isSubmitting} type="submit" className="w-full">
+                {isSubmitting ? (
                   <IconLoader className="animate-spin" stroke={2} />
                 ) : (
-                  "Reset Password"
+                  "Send a reset link"
                 )}
               </Button>
             </div>

@@ -7,6 +7,9 @@ const prisma = new PrismaClient();
 export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
+    sendResetPassword: async ({ user, token, url }, request) => {
+      console.log({ user, token, url });
+    },
   },
   plugins: [
     admin({

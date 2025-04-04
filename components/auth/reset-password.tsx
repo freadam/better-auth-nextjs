@@ -46,9 +46,9 @@ export function ResetPassword({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
+          <CardTitle>Reset your password</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your password and confirm it to reset your password.
           </CardDescription>
         </CardHeader>
         <CardContent>
