@@ -10,7 +10,7 @@ const Line = ({ className = "" }) => (
     )}
   />
 );
-export default function LandingPage() {
+export default function HeroSection() {
   return (
     <div className="bg-transparent text-white flex flex-col">
       <div className="absolute inset-0 z-0">
@@ -29,11 +29,11 @@ export default function LandingPage() {
           </div>
 
           <div className="relative px-14 py-14">
-            <Line className="bg-gradient-to-l left-0 top-2 sm:top-4 md:top-6" />
-            <Line className="bg-gradient-to-r bottom-2 sm:bottom-4 md:bottom-6 left-0" />
+            <Line className="left-0 top-2 bg-zinc-700/30 sm:top-4 md:top-6" />
+            <Line className="bottom-2 bg-zinc-700/30  sm:bottom-4 md:bottom-6 left-0" />
 
-            <Line className="w-px bg-gradient-to-t right-2 sm:right-4 md:right-6 h-full inset-y-0" />
-            <Line className="w-px bg-gradient-to-t left-2 sm:left-4 md:left-6 h-full inset-y-0" />
+            <Line className="w-px bg-zinc-700/30  right-2 sm:right-4 md:right-6 h-full inset-y-0" />
+            <Line className="w-px bg-zinc-700/30  left-2 sm:left-4 md:left-6 h-full inset-y-0" />
             <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6">
               Next.js + Better Auth +<br />
               Prisma Starter Kit
