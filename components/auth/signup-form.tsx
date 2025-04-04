@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { Terminal } from "lucide-react";
-
+import { toast } from "sonner";
 import { IconLoader } from "@tabler/icons-react";
 
 export function SignupForm({
