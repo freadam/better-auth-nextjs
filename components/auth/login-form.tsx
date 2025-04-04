@@ -148,7 +148,6 @@ export function LoginForm({
                   provider: "google",
                   fetchOptions: {
                     onRequest: (ctx) => {
-                      console.log({ ctx });
                       toast.loading("Authenticating...");
                     },
                     onSuccess: (ctx) => {
@@ -200,7 +199,6 @@ export function LoginForm({
                   provider: "twitter",
                   fetchOptions: {
                     onRequest: (ctx) => {
-                      console.log({ ctx });
                       toast.loading("Authenticating...");
                     },
                     onSuccess: (ctx) => {
@@ -233,7 +231,6 @@ export function LoginForm({
                   provider: "github",
                   fetchOptions: {
                     onRequest: (ctx) => {
-                      console.log({ ctx });
                       toast.loading("Authenticating...");
                     },
                     onSuccess: (ctx) => {
