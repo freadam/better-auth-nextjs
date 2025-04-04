@@ -37,7 +37,7 @@ export default async function page() {
               {session?.user ? (
                 <a href="/dashboard">
                   <Button
-                    className="rounded-none flex items-center gap-2"
+                    className="rounded-sm flex items-center gap-2"
                     variant="outline"
                     size="default"
                   >
@@ -48,12 +48,12 @@ export default async function page() {
               ) : (
                 <>
                   <Link href="/login">
-                    <Button className="rounded-none" variant="outline">
+                    <Button className="rounded-sm" variant="outline">
                       Log in
                     </Button>
                   </Link>
                   <Link href="/signup">
-                    <Button className="rounded-none">Sign up</Button>
+                    <Button className="rounded-sm">Sign up</Button>
                   </Link>
                 </>
               )}
