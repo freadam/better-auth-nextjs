@@ -33,13 +33,20 @@ export function ResetPassword({
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
-    const res = await authClient.resetPassword({
+    await authClient.resetPassword({
       newPassword: password,
+      fetchOptions: {
+        onSuccess: (ctx) => {
+          toast.success("We have sent you an email for an instructions.");
+        },
+        onError: (ctx) => {
+          toast.error(ctx.error.message);
+        },
+        onResponse: () => {
+          setIsSubmitting(false);
+        },
+      },
     });
-    if (res.error) {
-      toast.error(res.error.message);
-    }
-    setIsSubmitting(false);
     router.push("/sign-in");
   }
   return (

@@ -19,6 +19,7 @@ import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { Terminal } from "lucide-react";
 
 import { IconLoader } from "@tabler/icons-react";
+import { toast } from "sonner";
 
 export function ForgetPassword({
   className,
@@ -36,20 +37,25 @@ export function ForgetPassword({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    try {
-      const res = await authClient.forgetPassword({
-        email,
-        redirectTo: "/reset-password",
-      });
-      console.log({ res });
-      setIsSubmitting(false);
-    } catch (err) {
-      alert(err);
-      console.log(err);
-      setError("An error occurred. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    const res = await authClient.forgetPassword({
+      email,
+      redirectTo: "/reset-password",
+      fetchOptions: {
+        onSuccess: () => {
+          toast.success(
+            "We have successfully sent your a verification email to your account.",
+          );
+        },
+        onError: (ctx) => {
+          alert(ctx.error.message);
+        },
+        onResponse: () => {
+          setLoading(false);
+          setIsSubmitting(false);
+        },
+      },
+    });
+    console.log({ res });
   };
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
