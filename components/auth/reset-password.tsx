@@ -15,8 +15,8 @@ import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 
 import { authClient } from "@/lib/auth-client";
-import { Alert, AlertDescription, AlertTitle, AlertCircle } from "../ui/alert";
-import { Terminal } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
+import { AlertCircle, Terminal } from "lucide-react";
 import { toast } from "sonner";
 
 export function ResetPassword({
