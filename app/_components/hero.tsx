@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Shield, Check, Github, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { cn } from "@/lib/utils";
+const Line = ({ className = "" }) => (
+  <div
+    className={cn(
+      "h-px w-full via-zinc-400 from-[1%] from-zinc-200 to-zinc-600 absolute -z-0 dark:via-zinc-700 dark:from-zinc-900 dark:to-zinc-500",
+      className,
+    )}
+  />
+);
 export default function LandingPage() {
   return (
     <div className="bg-transparent text-white flex flex-col">
@@ -20,7 +28,12 @@ export default function LandingPage() {
             <div className="absolute -inset-4 border border-zinc-800 rounded-full opacity-50"></div>
           </div>
 
-          <div className="border my-8 px-10 py-6 border-dashed border-zinc-400/10 dark:border-zinc-700/20 relative">
+          <div className="relative px-14 py-14">
+            <Line className="bg-gradient-to-l left-0 top-2 sm:top-4 md:top-6" />
+            <Line className="bg-gradient-to-r bottom-2 sm:bottom-4 md:bottom-6 left-0" />
+
+            <Line className="w-px bg-gradient-to-t right-2 sm:right-4 md:right-6 h-full inset-y-0" />
+            <Line className="w-px bg-gradient-to-t left-2 sm:left-4 md:left-6 h-full inset-y-0" />
             <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-6xl font-bold text-center mb-6">
               Next.js + Better Auth +<br />
               Prisma Starter Kit

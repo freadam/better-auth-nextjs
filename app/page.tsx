@@ -17,7 +17,10 @@ import {
   ArrowRight,
   Layout,
   ArrowUpRight,
+  LogOut,
 } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
+import LogoutButton from "@/components/auth/logout-button-icon";
 export default async function page() {
   const session = await auth.api.getSession({
     headers: await headers(),
@@ -25,7 +28,7 @@ export default async function page() {
   console.log({ session });
   return (
     <div className="flex relative min-h-screen flex-col">
-      <div className="h-screen absolute inset-0 w-full -z-10 opacity-40 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+      {/* <div className="h-screen absolute inset-0 w-full -z-10 opacity-40 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div> */}
       <header className="relative z-20 border-b">
         <div className="container  flex h-16 items-center justify-between">
           <div className="flex items-center ">
@@ -35,16 +38,19 @@ export default async function page() {
             <div className="flex items-center gap-2">
               <ModeToggle />
               {session?.user ? (
-                <a href="/dashboard">
-                  <Button
-                    className="rounded-sm flex items-center gap-2"
-                    variant="outline"
-                    size="default"
-                  >
-                    <Layout className="w-4 h-4" />
-                    Dashboard
-                  </Button>
-                </a>
+                <div className="flex gap-2 items-center">
+                  <a href="/dashboard">
+                    <Button
+                      className="rounded-sm flex items-center gap-2"
+                      variant="outline"
+                      size="default"
+                    >
+                      <Layout className="w-4 h-4" />
+                      Dashboard
+                    </Button>
+                  </a>
+                  <LogoutButton />
+                </div>
               ) : (
                 <>
                   <Link href="/login">

@@ -30,7 +30,6 @@ import { ChevronsUpDown } from "lucide-react";
 
 export function NavUser({ user }: { user: Partial<User> }) {
   const { isMobile } = useSidebar();
-
   return (
     <SidebarMenu>
       <SidebarMenuItem>
