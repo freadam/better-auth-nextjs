@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import { useRouter } from "next/navigation";
@@ -19,7 +18,6 @@ import { authClient } from "@/lib/auth-client";
 import { Alert, AlertDescription, AlertTitle, AlertCircle } from "../ui/alert";
 import { Terminal } from "lucide-react";
 import { toast } from "sonner";
-import { IconLoader } from "@tabler/icons-react";
 
 export function ResetPassword({
   className,
