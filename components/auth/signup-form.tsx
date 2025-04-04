@@ -148,7 +148,26 @@ export function SignupForm({
 
             <hr className="w-full h-px border-input my-4" />
             <div className="flex my-3 gap-2">
-              <button className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8688921_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50">
+              <button
+                onClick={async () => {
+                  await authClient.signIn.social({
+                    provider: "google",
+                    fetchOptions: {
+                      onRequest: (ctx) => {
+                        console.log({ ctx });
+                        toast.loading("Authenticating...");
+                      },
+                      onSuccess: (ctx) => {
+                        toast.success("Authentication Redirecting...");
+                      },
+                      onError: (ctx) => {
+                        setError(ctx.error.message);
+                      },
+                    },
+                  });
+                }}
+                className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8688921_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50"
+              >
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 48 48"
@@ -181,7 +200,26 @@ export function SignupForm({
                 </svg>
                 {/* Continue with Google */}
               </button>
-              <button className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50">
+              <button
+                onClick={async () => {
+                  await authClient.signIn.social({
+                    provider: "twitter",
+                    fetchOptions: {
+                      onRequest: (ctx) => {
+                        console.log({ ctx });
+                        toast.loading("Authenticating...");
+                      },
+                      onSuccess: (ctx) => {
+                        toast.success("Authentication Redirecting...");
+                      },
+                      onError: (ctx) => {
+                        setError(ctx.error.message);
+                      },
+                    },
+                  });
+                }}
+                className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50"
+              >
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 48 48"
@@ -195,7 +233,26 @@ export function SignupForm({
                 </svg>
                 {/* Continue with Twitter */}
               </button>
-              <button className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50">
+              <button
+                onClick={async () => {
+                  await authClient.signIn.social({
+                    provider: "github",
+                    fetchOptions: {
+                      onRequest: (ctx) => {
+                        console.log({ ctx });
+                        toast.loading("Authenticating...");
+                      },
+                      onSuccess: (ctx) => {
+                        toast.success("Authentication Redirecting...");
+                      },
+                      onError: (ctx) => {
+                        setError(ctx.error.message);
+                      },
+                    },
+                  });
+                }}
+                className="group w-full space-x-1 py-3 flex transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f_inset]  border-white/10  items-center justify-center border rounded-lg hover:bg-transparent/20 duration-150 active:bg-transparent/50"
+              >
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 48 48"
