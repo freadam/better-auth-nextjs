@@ -25,8 +25,6 @@ export default async function page() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
-  console.log("here is what i am working..");
-  console.log({ session });
   return (
     <div className="flex relative min-h-screen flex-col">
       <header className="relative z-20 border-b">
