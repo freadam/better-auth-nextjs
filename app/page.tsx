@@ -4,20 +4,7 @@ import { headers } from "next/headers";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import {
-  IconChevronRight,
-  IconLockSquareRoundedFilled,
-  IconShieldCheckFilled,
-} from "@tabler/icons-react";
-import {
-  Shield,
-  Check,
-  Github,
-  ArrowRight,
-  Layout,
-  ArrowUpRight,
-  LogOut,
-} from "lucide-react";
+import { Shield, ArrowRight, Layout, ArrowUpRight, LogOut } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import LogoutButton from "@/components/auth/logout-button-icon";
 import HeroSection from "./_components/hero";
