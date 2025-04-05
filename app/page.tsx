@@ -53,7 +53,7 @@ export default async function page() {
         </div>
       </header>
       <HeroSection />
-      <footer className="fixed border bottom-0 w-full z-10 border-t flex border-zinc-800 py-6 bg-black/80 backdrop-blur-sm">
+      <footer className="fixed border bottom-0 w-full z-10 border-t flex border-zinc-200 dark:border-zinc-800 py-6 md:bg-black/5 md:dark:bg-black/80 backdrop-blur-sm">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <Shield className="h-5 w-5 mr-2" />
@@ -62,18 +62,18 @@ export default async function page() {
           <div className="flex items-center space-x-6">
             <Link
               href="#"
-              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+              className="text-sm flex gap-2 items-center text-zinc-700 dark:text-zinc-400 dark:hover:text-white"
             >
               Github <ArrowUpRight className="w-3 h-3" />
             </Link>
             <Link
-              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+              className="text-sm flex gap-2 items-center text-zinc-700 dark:text-zinc-400 dark:hover:text-white"
               href="#"
             >
               Docs <ArrowUpRight className="w-3 h-3" />
             </Link>
             <Link
-              className="text-sm flex gap-2 items-center text-zinc-400 hover:text-white"
+              className="text-sm flex gap-2 items-center text-zinc-700 dark:text-zinc-400 dark:hover:text-white"
               href="#"
             >
               Examples

@@ -39,7 +39,7 @@ export default function HeroSection() {
               Prisma Starter Kit
             </h1>
           </div>
-          <p className="text-zinc-400 tracking-tight text-center max-w-2xl mb-10">
+          <p className="text-zinc-600 dark:text-zinc-400 tracking-tight text-center max-w-2xl mb-10">
             Better-Auth is a complete authentication solution for your Next.js
             projects, powered by Prisma and styled with Shadcn UI components.
           </p>
@@ -51,7 +51,7 @@ export default function HeroSection() {
             </Button>
             <Button
               variant="outline"
-              className="w-fit rounded-md border-zinc-800 text-white hover:bg-zinc-900 h-12 text-base"
+              className="w-fit rounded-md dark:text-white text-black border-zinc-200/20 hover:bg-transparent dark:border-zinc-800 cursor-pointer dark:hover:bg-zinc-900 h-12 text-base"
             >
               Try Demo
             </Button>
@@ -73,10 +73,14 @@ export default function HeroSection() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="border rounded-md border-zinc-800 bg-zinc-900/20 p-6 backdrop-blur-sm"
+                className="border rounded-md border-zinc-200 dark:border-zinc-800 bg-zinc-900/10 dark:bg-zinc-900/20 p-6 backdrop-blur-sm"
               >
-                <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-                <p className="text-zinc-400 text-sm">{feature.description}</p>
+                <h3 className="text-lg text-black dark:text-white font-medium mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-zinc-700 dark:text-zinc-400 text-sm">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
