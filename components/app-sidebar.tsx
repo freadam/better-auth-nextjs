@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import {
   IconCamera,
@@ -22,6 +21,11 @@ import {
   IconSettings,
   IconUserCircle,
   IconUsers,
+  IconShieldLock,
+  IconBell,
+  IconDeviceDesktop,
+  IconKey,
+  IconCreditCard,
 } from "@tabler/icons-react";
 
 import { NavDocuments } from "@/components/nav-documents";
@@ -60,28 +64,41 @@ const data = {
       title: "Setting",
       url: "/dashboard/setting",
       icon: IconSettings,
+      items: [
+        {
+          title: "Profile",
+          url: "/dashboard/setting/profile",
+          icon: IconUserCircle,
+        },
+        {
+          title: "Security",
+          url: "/dashboard/setting/security",
+          icon: IconShieldLock,
+        },
+        {
+          title: "Notifications",
+          url: "/dashboard/setting/notifications",
+          icon: IconBell,
+        },
+        {
+          title: "Appearance",
+          url: "/dashboard/setting/appearance",
+          icon: IconDeviceDesktop,
+        },
+        {
+          title: "API Keys",
+          url: "/dashboard/setting/api-keys",
+          icon: IconKey,
+        },
+        {
+          title: "Billing",
+          url: "/dashboard/setting/billing",
+          icon: IconCreditCard,
+        },
+      ],
     },
-    // {
-    //   title: "Lifecycle",
-    //   url: "#",
-    //   icon: IconListDetails,
-    // },
-    // {
-    //   title: "Analytics",
-    //   url: "#",
-    //   icon: IconChartBar,
-    // },
-    // {
-    //   title: "Projects",
-    //   url: "#",
-    //   icon: IconFolder,
-    // },
-    // {
-    //   title: "Team",
-    //   url: "#",
-    //   icon: IconUsers,
-    // },
   ],
+
   navClouds: [
     {
       title: "Capture",
