@@ -6,10 +6,9 @@ export default async function ProfilePage() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
-
   return (
     <div className="px-4">
-      <ProfileSection session={session} />
+      <ProfileSection session={session!} />
     </div>
   );
 }

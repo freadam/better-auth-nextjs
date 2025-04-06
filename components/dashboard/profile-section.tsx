@@ -22,7 +22,8 @@ export function ProfileSection({
   session: { user: User; session: Session };
 }) {
   const [isEditing, setIsEditing] = useState(false);
-
+  const [name, setName] = useState(session.user.name);
+  const [email, setEmail] = useState(session.user.email);
   return (
     <div className="space-y-6">
       <div>
@@ -48,7 +49,11 @@ export function ProfileSection({
             <AvatarImage src={session.user.image!} alt="User" />
 
             <AvatarFallback className="bg-zinc-100 dark:bg-zinc-800 text-xl text-zinc-800 dark:text-zinc-200">
-              JD
+              {session.user.name
+                ?.split(" ")
+                .map((n) => n[0])
+                .join("")
+                .toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col space-y-2">
