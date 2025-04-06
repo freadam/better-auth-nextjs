@@ -126,7 +126,7 @@ export function NavMain({ className, items, ...props }: NavMainProps) {
                     </SidebarMenuItem>
                     <CollapsibleContent>
                       <SidebarMenuSub>
-                        {item.items.map((subItem) => {
+                        {item?.items?.map((subItem) => {
                           const isSubActive = pathname === subItem.url;
                           const Icon = subItem.icon;
 
