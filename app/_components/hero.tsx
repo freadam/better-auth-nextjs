@@ -101,16 +101,6 @@ export default function HeroSection() {
           </svg>
         </div>
         <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
-          <div className="mb-8 relative">
-            {/* <div className="h-24 w-24 bg-zinc-900/50 rounded-full flex items-center justify-center border border-zinc-800">
-              <div className="h-16 w-16 bg-zinc-900 rounded-full flex items-center justify-center border border-zinc-700">
-                <Shield className="h-8 w-8 text-white" />
-                <Check className="h-4 w-4 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              </div>
-            </div> */}
-            {/* <div className="absolute -inset-4 border border-zinc-800 rounded-full opacity-50"></div> */}
-          </div>
-
           <div className="relative -mt-10 px-14 py-14">
             <Line className="left-0 top-2 bg-zinc-700/30 sm:top-4 md:top-6" />
             <Line className="bottom-2 bg-zinc-700/30  sm:bottom-4 md:bottom-6 left-0" />
