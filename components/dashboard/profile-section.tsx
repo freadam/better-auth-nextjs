@@ -21,41 +21,41 @@ export function ProfileSection() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           Profile
         </h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
           Manage your personal information and how it appears to others.
         </p>
       </div>
 
-      <Card className="border-gray-200 dark:border-gray-800 dark:bg-gray-950">
+      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-black">
         <CardHeader>
-          <CardTitle className="text-gray-900 dark:text-gray-100">
+          <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Profile Picture
           </CardTitle>
-          <CardDescription className="text-gray-500 dark:text-gray-400">
+          <CardDescription className="text-zinc-500 dark:text-zinc-400">
             This will be displayed on your profile.
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col items-center space-y-4 sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0">
-          <Avatar className="h-24 w-24 border border-gray-200 dark:border-gray-800">
+          <Avatar className="h-24 w-24 border border-zinc-200 dark:border-zinc-800">
             <AvatarImage src="/placeholder.svg?height=96&width=96" alt="User" />
-            <AvatarFallback className="bg-gray-100 dark:bg-gray-800 text-xl text-gray-800 dark:text-gray-200">
+            <AvatarFallback className="bg-zinc-100 dark:bg-zinc-800 text-xl text-zinc-800 dark:text-zinc-200">
               JD
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col space-y-2">
             <Button
               variant="outline"
-              className="border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 dark:hover:text-gray-100"
+              className="border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-100"
             >
               <Upload className="mr-2 h-4 w-4" />
               Upload new image
             </Button>
             <Button
               variant="ghost"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+              className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
             >
               Remove
             </Button>
@@ -63,12 +63,12 @@ export function ProfileSection() {
         </CardContent>
       </Card>
 
-      <Card className="border-gray-200 dark:border-gray-800 dark:bg-gray-950">
+      <Card className="border-zinc-200 dark:border-zinc-800 border dark:bg-transparent">
         <CardHeader>
-          <CardTitle className="text-gray-900 dark:text-gray-100">
+          <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Personal Information
           </CardTitle>
-          <CardDescription className="text-gray-500 dark:text-gray-400">
+          <CardDescription className="text-zinc-500 dark:text-zinc-400">
             Update your personal details.
           </CardDescription>
         </CardHeader>
@@ -77,7 +77,7 @@ export function ProfileSection() {
             <div className="space-y-2">
               <Label
                 htmlFor="firstName"
-                className="text-gray-900 dark:text-gray-100"
+                className="text-zinc-900 dark:text-zinc-100"
               >
                 First name
               </Label>
@@ -85,13 +85,13 @@ export function ProfileSection() {
                 id="firstName"
                 defaultValue="John"
                 disabled={!isEditing}
-                className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
               />
             </div>
             <div className="space-y-2">
               <Label
                 htmlFor="lastName"
-                className="text-gray-900 dark:text-gray-100"
+                className="text-zinc-900 dark:text-zinc-100"
               >
                 Last name
               </Label>
@@ -99,12 +99,12 @@ export function ProfileSection() {
                 id="lastName"
                 defaultValue="Doe"
                 disabled={!isEditing}
-                className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
               />
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-gray-900 dark:text-gray-100">
+            <Label htmlFor="email" className="text-zinc-900 dark:text-zinc-100">
               Email address
             </Label>
             <Input
@@ -112,11 +112,11 @@ export function ProfileSection() {
               type="email"
               defaultValue="john.doe@example.com"
               disabled={!isEditing}
-              className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+              className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone" className="text-gray-900 dark:text-gray-100">
+            <Label htmlFor="phone" className="text-zinc-900 dark:text-zinc-100">
               Phone number
             </Label>
             <Input
@@ -124,23 +124,23 @@ export function ProfileSection() {
               type="tel"
               defaultValue="+1 (555) 123-4567"
               disabled={!isEditing}
-              className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+              className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
             />
           </div>
         </CardContent>
-        <CardFooter className="flex justify-end space-x-2 border-t border-gray-100 dark:border-gray-800 px-6 py-4">
+        <CardFooter className="flex justify-end space-x-2 border-t border-zinc-100 dark:border-zinc-800 px-6 py-4">
           {isEditing ? (
             <>
               <Button
                 variant="outline"
                 onClick={() => setIsEditing(false)}
-                className="border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300"
+                className="border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300"
               >
                 Cancel
               </Button>
               <Button
                 onClick={() => setIsEditing(false)}
-                className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
+                className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200"
               >
                 Save changes
               </Button>
@@ -148,7 +148,7 @@ export function ProfileSection() {
           ) : (
             <Button
               onClick={() => setIsEditing(true)}
-              className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
+              className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200"
             >
               Edit profile
             </Button>
