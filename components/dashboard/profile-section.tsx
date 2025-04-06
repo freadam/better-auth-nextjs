@@ -14,8 +14,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Upload } from "lucide-react";
+import { Session, User } from "better-auth";
 
-export function ProfileSection() {
+export function ProfileSection({
+  session,
+}: {
+  session: { user: User; session: Session };
+}) {
   const [isEditing, setIsEditing] = useState(false);
 
   return (
@@ -40,7 +45,8 @@ export function ProfileSection() {
         </CardHeader>
         <CardContent className="flex flex-col items-center space-y-4 sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0">
           <Avatar className="h-24 w-24 border border-zinc-200 dark:border-zinc-800">
-            <AvatarImage src="/placeholder.svg?height=96&width=96" alt="User" />
+            <AvatarImage src={session.user.image!} alt="User" />
+
             <AvatarFallback className="bg-zinc-100 dark:bg-zinc-800 text-xl text-zinc-800 dark:text-zinc-200">
               JD
             </AvatarFallback>
@@ -83,6 +89,7 @@ export function ProfileSection() {
               </Label>
               <Input
                 id="firstName"
+                value={session.user.name}
                 defaultValue="John"
                 disabled={!isEditing}
                 className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
@@ -110,6 +117,7 @@ export function ProfileSection() {
             <Input
               id="email"
               type="email"
+              value={session.user.email}
               defaultValue="john.doe@example.com"
               disabled={!isEditing}
               className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 focus-visible:ring-zinc-950 dark:focus-visible:ring-zinc-300"
