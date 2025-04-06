@@ -128,7 +128,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
             <Link href={"https://github.com/Kinfe123/better-auth-nextjs"}>
-              <Button className="rounded-md tracking-tight group bg-zinc-100 text-black hover:bg-zinc-200 h-12 text-base">
+              <Button className="rounded-md cursor-pointer tracking-tight group bg-zinc-100 text-black hover:bg-zinc-200 h-12 text-base">
                 <Github className="mr-2 h-5 w-5" />
                 Get the repo{" "}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
