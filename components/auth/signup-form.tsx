@@ -19,6 +19,7 @@ import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { Terminal } from "lucide-react";
 import { toast } from "sonner";
 import { IconLoader } from "@tabler/icons-react";
+import { PasswordInput } from "../ui/password-input";
 
 export function SignupForm({
   className,
@@ -29,13 +30,12 @@ export function SignupForm({
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-
     const { data, error } = await authClient.signUp.email(
       {
         /**
@@ -54,6 +54,9 @@ export function SignupForm({
       },
       {
         onRequest: (ctx) => {
+          if (password !== confirmPassword) {
+            setError("Password is not matching");
+          }
           setLoading(true);
         },
         onSuccess: (ctx) => {
@@ -118,9 +121,22 @@ export function SignupForm({
                     Forgot your password?
                   </a>
                 </div>
-                <Input
-                  onChange={(e) => setPassword(e.target.value)}
+                <PasswordInput
+                  onChange={(e: any) => setPassword(e.target.value)}
                   value={password}
+                  id="password"
+                  type="password"
+                  required
+                />
+              </div>
+
+              <div className="grid gap-3">
+                <div className="flex items-center">
+                  <Label htmlFor="password">Confirm Password</Label>
+                </div>
+                <PasswordInput
+                  onChange={(e: any) => setConfirmPassword(e.target.value)}
+                  value={confirmPassword}
                   id="password"
                   type="password"
                   required
