@@ -27,20 +27,20 @@ export function PreferencesSection() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           Preferences
         </h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
           Customize your account settings and notification preferences.
         </p>
       </div>
 
-      <Card className="border-gray-200 dark:border-gray-800 dark:bg-gray-950">
+      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-950">
         <CardHeader>
-          <CardTitle className="text-gray-900 dark:text-gray-100">
+          <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Language & Region
           </CardTitle>
-          <CardDescription className="text-gray-500 dark:text-gray-400">
+          <CardDescription className="text-zinc-500 dark:text-zinc-400">
             Set your language and regional preferences.
           </CardDescription>
         </CardHeader>
@@ -48,14 +48,14 @@ export function PreferencesSection() {
           <div className="space-y-2">
             <Label
               htmlFor="language"
-              className="text-gray-900 dark:text-gray-100"
+              className="text-zinc-900 dark:text-zinc-100"
             >
               Language
             </Label>
             <Select defaultValue="en">
               <SelectTrigger
                 id="language"
-                className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100"
+                className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
               >
                 <SelectValue placeholder="Select language" />
               </SelectTrigger>
@@ -71,14 +71,14 @@ export function PreferencesSection() {
           <div className="space-y-2">
             <Label
               htmlFor="timezone"
-              className="text-gray-900 dark:text-gray-100"
+              className="text-zinc-900 dark:text-zinc-100"
             >
               Time zone
             </Label>
             <Select defaultValue="pst">
               <SelectTrigger
                 id="timezone"
-                className="border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100"
+                className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
               >
                 <SelectValue placeholder="Select time zone" />
               </SelectTrigger>
@@ -96,22 +96,22 @@ export function PreferencesSection() {
         </CardContent>
       </Card>
 
-      <Card className="border-gray-200 dark:border-gray-800 dark:bg-gray-950">
+      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-950">
         <CardHeader>
-          <CardTitle className="text-gray-900 dark:text-gray-100">
+          <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Notifications
           </CardTitle>
-          <CardDescription className="text-gray-500 dark:text-gray-400">
+          <CardDescription className="text-zinc-500 dark:text-zinc-400">
             Configure how you receive notifications.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <h4 className="font-medium text-gray-900 dark:text-gray-100">
+              <h4 className="font-medium text-zinc-900 dark:text-zinc-100">
                 Email Notifications
               </h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
                 Receive notifications about account activity via email.
               </p>
             </div>
@@ -119,10 +119,10 @@ export function PreferencesSection() {
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <h4 className="font-medium text-gray-900 dark:text-gray-100">
+              <h4 className="font-medium text-zinc-900 dark:text-zinc-100">
                 Push Notifications
               </h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
                 Receive notifications on your device when you're signed in.
               </p>
             </div>
@@ -130,10 +130,10 @@ export function PreferencesSection() {
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <h4 className="font-medium text-gray-900 dark:text-gray-100">
+              <h4 className="font-medium text-zinc-900 dark:text-zinc-100">
                 Marketing Emails
               </h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
                 Receive emails about new features, products, and offers.
               </p>
             </div>
@@ -142,12 +142,12 @@ export function PreferencesSection() {
         </CardContent>
       </Card>
 
-      <Card className="border-gray-200 dark:border-gray-800 dark:bg-gray-950">
+      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-zinc-950">
         <CardHeader>
-          <CardTitle className="text-gray-900 dark:text-gray-100">
+          <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Appearance
           </CardTitle>
-          <CardDescription className="text-gray-500 dark:text-gray-400">
+          <CardDescription className="text-zinc-500 dark:text-zinc-400">
             Customize how the interface looks.
           </CardDescription>
         </CardHeader>
@@ -161,7 +161,7 @@ export function PreferencesSection() {
               <RadioGroupItem value="light" id="light" />
               <Label
                 htmlFor="light"
-                className="font-normal text-gray-900 dark:text-gray-100"
+                className="font-normal text-zinc-900 dark:text-zinc-100"
               >
                 Light
               </Label>
@@ -170,7 +170,7 @@ export function PreferencesSection() {
               <RadioGroupItem value="dark" id="dark" />
               <Label
                 htmlFor="dark"
-                className="font-normal text-gray-900 dark:text-gray-100"
+                className="font-normal text-zinc-900 dark:text-zinc-100"
               >
                 Dark
               </Label>
@@ -179,15 +179,15 @@ export function PreferencesSection() {
               <RadioGroupItem value="system" id="system" />
               <Label
                 htmlFor="system"
-                className="font-normal text-gray-900 dark:text-gray-100"
+                className="font-normal text-zinc-900 dark:text-zinc-100"
               >
                 System
               </Label>
             </div>
           </RadioGroup>
         </CardContent>
-        <CardFooter className="flex justify-end border-t border-gray-100 dark:border-gray-800 px-6 py-4">
-          <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200">
+        <CardFooter className="flex justify-end border-t border-zinc-100 dark:border-zinc-800 px-6 py-4">
+          <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200">
             Save preferences
           </Button>
         </CardFooter>

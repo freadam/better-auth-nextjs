@@ -22,11 +22,22 @@ model User {
   banExpires    DateTime?
   sessions      Session[]
   accounts      Account[]
-
+  preference    Preference[]
   @@unique([email])
   @@map("user")
 }
+model Preference {
+    id        String   @id
+    userId    String
+    user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    key       String
+    value     String
+    createdAt DateTime
+    updatedAt DateTime
 
+    @@unique([userId, key])
+    @@map("preference")
+}
 model Session {
   id             String   @id
   expiresAt      DateTime
