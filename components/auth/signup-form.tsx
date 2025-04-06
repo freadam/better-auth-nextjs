@@ -56,6 +56,7 @@ export function SignupForm({
         onRequest: (ctx) => {
           if (password !== confirmPassword) {
             setError("Password is not matching");
+            return;
           }
           setLoading(true);
         },
