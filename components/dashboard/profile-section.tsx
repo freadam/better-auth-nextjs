@@ -35,7 +35,7 @@ export function ProfileSection({
         </p>
       </div>
 
-      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-black">
+      <Card className="border-zinc-200 dark:border-zinc-800 dark:bg-transparent">
         <CardHeader>
           <CardTitle className="text-zinc-900 dark:text-zinc-100">
             Profile Picture
