@@ -34,7 +34,7 @@ export const auth = betterAuth({
     },
     twitter: {
       clientId: process.env.TWITTER_CLIENT_ID!,
-      clientSecret: process.env.TWIITTER_CLIENT_SECRET!,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET!,
     },
   },
   database: prismaAdapter(prisma, {
