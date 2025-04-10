@@ -37,7 +37,7 @@ export function ResetPassword({
       fetchOptions: {
         onError: (ctx) => {
           setError(ctx.error.message);
-          toast.error(ctx.error.message);
+          toast.error(ctx.error.message ?? "Something went wrong");
         },
         onSuccess: (ctx) => {
           toast.success("You have reset your password.");
