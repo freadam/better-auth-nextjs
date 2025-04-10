@@ -82,7 +82,7 @@ const data = {
         },
         {
           title: "Appearance",
-          url: "/dashboard/setting/appearance",
+          url: "/dashboard/setting/preference",
           icon: IconDeviceDesktop,
         },
         {
