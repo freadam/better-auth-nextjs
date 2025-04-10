@@ -16,8 +16,6 @@ export default async function layout({
   const session = await auth.api.getSession({
     headers: await headers(), // you need to pass the headers object.
   });
-  console.log("Dashboard");
-  console.log({ session });
   if (!session?.user) {
     redirect("/login");
   }

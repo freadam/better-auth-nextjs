@@ -61,9 +61,7 @@ export function SignupForm({
           setLoading(true);
         },
         onSuccess: (ctx) => {
-          // redirect to the dashboard
-          //alert("Logged in successfully");
-          router.push("/dashboard");
+          router.push("/login");
         },
         onError: (ctx) => {
           // display the error message

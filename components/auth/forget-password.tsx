@@ -55,6 +55,7 @@ export function ForgetPassword({
         },
       },
     });
+    console.log("forget password");
     console.log({ res });
   };
   return (

@@ -56,16 +56,13 @@ export function LoginForm({
          */
         rememberMe: false,
       },
+
       {
         onRequest: (ctx) => {
           setLoading(true);
         },
-        onSuccess: (ctx) => {
-          // redirect to the dashboard
-          //alert("Logged in successfully");
-        },
+        onSuccess: (ctx) => {},
         onError: (ctx) => {
-          // display the error message
           setError(ctx.error.message);
           setLoading(false);
         },
