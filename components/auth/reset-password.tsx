@@ -36,13 +36,6 @@ export function ResetPassword({
     await authClient.resetPassword({
       newPassword: password,
       fetchOptions: {
-        onRequest: () => {
-          if (password !== confirmPassword) {
-            setError("Password is not matching");
-            return;
-          }
-          setIsSubmitting(false);
-        },
         onError: (ctx) => {
           setError(ctx.error.message);
           toast.error(ctx.error.message);
@@ -106,7 +99,7 @@ export function ResetPassword({
             <Button
               className="w-full mt-4"
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || password !== confirmPassword}
             >
               {isSubmitting ? "Resetting..." : "Reset password"}
             </Button>
