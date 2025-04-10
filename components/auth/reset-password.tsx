@@ -33,6 +33,7 @@ export function ResetPassword({
     setError("");
     await authClient.resetPassword({
       newPassword: password,
+      token: new URLSearchParams(window.location.search).get("token")!,
       fetchOptions: {
         onError: (ctx) => {
           setError(ctx.error.message);
