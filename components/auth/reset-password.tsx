@@ -41,6 +41,7 @@ export function ResetPassword({
             setError("Password is not matching");
             return;
           }
+          setIsSubmitting(false);
         },
         onError: (ctx) => {
           setError(ctx.error.message);
@@ -49,13 +50,13 @@ export function ResetPassword({
         onSuccess: (ctx) => {
           toast.success("You have reset your password.");
           setError("");
+          router.push("/login");
         },
         onResponse: () => {
           setIsSubmitting(false);
         },
       },
     });
-    router.push("/login");
   }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
