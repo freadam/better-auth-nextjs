@@ -36,18 +36,26 @@ export function ResetPassword({
     await authClient.resetPassword({
       newPassword: password,
       fetchOptions: {
-        onSuccess: (ctx) => {
-          toast.success("We have sent you an email for an instructions.");
+        onRequest: () => {
+          if (password !== confirmPassword) {
+            setError("Password is not matching");
+            return;
+          }
         },
         onError: (ctx) => {
+          setError(ctx.error.message);
           toast.error(ctx.error.message);
+        },
+        onSuccess: (ctx) => {
+          toast.success("You have reset your password.");
+          setError("");
         },
         onResponse: () => {
           setIsSubmitting(false);
         },
       },
     });
-    router.push("/sign-in");
+    router.push("/login");
   }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>

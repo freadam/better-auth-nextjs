@@ -64,7 +64,6 @@ export function SignupForm({
           router.push("/login");
         },
         onError: (ctx) => {
-          // display the error message
           setError(ctx.error.message);
           setLoading(false);
         },
