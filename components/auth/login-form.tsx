@@ -185,7 +185,6 @@ export function LoginForm({
                   </clipPath>
                 </defs>
               </svg>
-              {/* Continue with Google */}
             </button>
             <button
               onClick={async () => {
@@ -285,7 +284,6 @@ export function LoginForm({
                   </clipPath>
                 </defs>
               </svg>
-              {/* Continue with Github */}
             </button>
           </div>
         </CardContent>
