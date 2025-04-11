@@ -30,9 +30,9 @@ export const auth = betterAuth({
         before: async (session) => {
           console.log("session create", session);
         },
-        update: async (session) => {
-          console.log("session update", session);
-        },
+        // update: async (session) => {
+        //   console.log("session update", session);
+        // },
       },
     },
     user: {
