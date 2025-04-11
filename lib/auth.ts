@@ -23,6 +23,23 @@ export const auth = betterAuth({
     }),
     nextCookies(),
   ],
+  databaseHooks: {
+    session: {
+      create: {
+        before: async (session) => {
+          console.log("session create", session);
+        };
+      },
+    },
+    update: {
+      before: async (session) => {
+        console.log("session update before", session, session.userId);
+      },
+      after: async (session) => {
+        console.log("session update after", session); // Retrieves the full session object
+      },
+    },
+  },
   socialProviders: {
     github: {
       clientId: process.env.GITHUB_CLIENT_ID!,
