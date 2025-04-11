@@ -20,6 +20,7 @@ import { Terminal } from "lucide-react";
 
 import { IconLoader } from "@tabler/icons-react";
 import { toast } from "sonner";
+import { PasswordInput } from "../ui/password-input";
 
 export function LoginForm({
   className,
@@ -109,7 +110,7 @@ export function LoginForm({
                     Forgot your password?
                   </a>
                 </div>
-                <Input
+                <PasswordInput
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                   id="password"

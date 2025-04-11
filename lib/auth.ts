@@ -23,6 +23,7 @@ export const auth = betterAuth({
     }),
     nextCookies(),
   ],
+
   databaseHooks: {
     session: {
       create: {
