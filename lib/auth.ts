@@ -38,7 +38,7 @@ export const auth = betterAuth({
           console.log("session update before", session, session);
         },
         after: async (session) => {
-          console.log("session update after", session); // Retrieves the full session object
+          console.log("session update after", session);
         },
       },
     },
