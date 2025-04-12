@@ -17,12 +17,7 @@ export const auth = betterAuth({
       console.log({ user, token, url });
     },
   },
-  plugins: [
-    admin({
-      adminUserIds: ["EXD5zjob2SD6CBWcEQ6OpLRHcyoUbnaB"],
-    }),
-    nextCookies(),
-  ],
+  plugins: [admin(), nextCookies()],
 
   databaseHooks: {
     session: {
