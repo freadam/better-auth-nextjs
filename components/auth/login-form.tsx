@@ -111,7 +111,7 @@ export function LoginForm({
                   </a>
                 </div>
                 <PasswordInput
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e: any) => setPassword(e.target.value)}
                   value={password}
                   id="password"
                   type="password"
