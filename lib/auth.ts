@@ -18,7 +18,11 @@ export const auth = betterAuth({
     },
   },
   plugins: [admin(), nextCookies()],
-
+  session: {
+    cookieCache: {
+      enabled: true,
+    },
+  },
   databaseHooks: {
     session: {
       create: {
