@@ -34,13 +34,29 @@ cd better-auth-nextjs
 pnpm install
 ```
 
-3. **Env variables**
+3. **Setup Env variables**
 
 ```bash
-mv .env.example .env
+cp .env.example .env
 ```
 
-4. **Run dev server**
+Edit `.env` with your configuration:
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/mydb?schema=public"
+AUTH_SECRET="your-auth-secret" # Generate with: openssl rand -base64 32
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+```
+
+5. **Run database migrations**
+
+```bash
+pnpm db:generate
+pnpm db:push
+```
+
+6. **Run dev server**
 
 ```bash
 pnpm dev
@@ -69,8 +85,12 @@ Common issues and solutions:
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
