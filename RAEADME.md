@@ -52,8 +52,8 @@ GOOGLE_CLIENT_SECRET="your-google-client-secret"
 5. **Run database migrations**
 
 ```bash
-pnpm db:generate
-pnpm db:push
+pnpm prisma generate
+pnpm prisma db push
 ```
 
 6. **Run dev server**
