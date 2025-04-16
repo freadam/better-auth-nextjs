@@ -21,7 +21,7 @@ A complete authentication solution using Better Auth, Next.js, and Prisma.
 
 ## Installation
 
-1. **Create a new Next.js project**
+1. **Clone the project**
 
 ```bash
 git clone https://github.com/Kinfe123/better-auth-nextjs
